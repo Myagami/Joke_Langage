@@ -13,14 +13,14 @@ class Suidou_Lang{
     private function Lang_Tokens(){
         return '/'.implode("|",
                        array(
-                             "大泉君",
+                             "大泉",
                              "ミスター",
-                             "藤村くん",
+                             "藤村",
                              "うれしー",
                              "サイコロ",
                              "原付",
                              "はかた号",
-                             "行きです。"
+                             "不幸行き"
                              )).'/' ;
     }
     public function Travel(){
@@ -45,7 +45,7 @@ class Suidou_Lang{
                 $memory[$addr]-- ;
                 break ;
                 /*アドレス操作*/
-            case "藤村君"://アドレス1をすすめる
+            case "藤村"://アドレス1をすすめる
                 $addr++ ;
                 break;
             case "うれしー" ://アドレスを1戻す
@@ -61,14 +61,14 @@ class Suidou_Lang{
                 echo chr($memory[$addr]) ;
                 break ;
                 /*ループ系*/
-            case "はかた号"://対応する、コス解除フラグへ
+            case "はかた号"://対応する、行き先フラグへ！
                 if($memory[$addr] == NULL){
                     $Tokens = $this->jumps[$addr] ;
                     echo $addr.":Start \n" ;                    
                 }else{
                     echo $addr.":Not Start\n" ;                    
                 }
-            case "行きです。"://対応する、コスなうフラグへ
+            case "不幸行き"://対応する、はかた号乗車フラグへ
                 if($memory[$addr] != 0){
                     echo $addr.":Not Break\n" ;                    
                 }else{
