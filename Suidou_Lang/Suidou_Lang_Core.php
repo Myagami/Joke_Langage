@@ -23,7 +23,7 @@ class Suidou_Lang{
                              "行きです。"
                              )).'/' ;
     }
-    public function run(){
+    public function Travel(){
         //Use var
         $memory = array() ;
         $pt = 0 ;
